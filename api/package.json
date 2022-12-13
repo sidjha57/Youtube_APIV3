@@ -1,0 +1,28 @@
+{
+  "name": "youtube_api_test",
+  "version": "1.0.0",
+  "description": "Youtube Data API testing",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sidjha57/Youtube_APIV3.git"
+  },
+  "author": "Siddharth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sidjha57/Youtube_APIV3/issues"
+  },
+  "homepage": "https://github.com/sidjha57/Youtube_APIV3#readme",
+  "dependencies": {
+    "axios": "^1.2.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.20",
+    "sequelize": "^6.27.0"
+  }
+}
