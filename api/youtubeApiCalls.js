@@ -72,7 +72,7 @@ setInterval(() => {
         status = "Failed";
         console.log(err);
     })
-}, 5000);
+}, 10000);
 
 
 export default status;
