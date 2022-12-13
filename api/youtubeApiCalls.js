@@ -11,21 +11,6 @@ let API_KEY = API_KEYS.keys[i];
 let PAGE_TOKEN = "";
 let status = "Successful"
 
-/*
-    Query Parameters Passed
-    
-    part: snippet (Provides the details of the video)
-    eventType: completed (Returns Only those videos which have been uploaded)
-    maxResults: 50 (Result per page 50)
-    order: date (Returns videos which were uploaded recently)
-    publishedAfter: 2022-11-22T00:00:00Z
-    q: cricket|football|tennis|badminton|hockey|volleyball|chess|golf (Returns videos related to these top 10 sports)
-    relevanceLanguage: en (Only videos in English)
-    type: video
-    videoDefinition: high 
-    pageToken: (At a time we get only 50 max results therefore pageToken keeps track of which page to return)
-*/
-
 const youtube_api_call = async () => {
     try {
         const url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&pageToken=${PAGE_TOKEN}&eventType=completed&maxResults=50&order=date&publishedAfter=${DATE}&q=cricket%7Cfootball%7Ctennis%7Cbadminton%7Chockey%7Cvolleyball%7Cchess%7Cgolf&relevanceLanguage=en&type=video&videoDefinition=high&key=${API_KEY}`;
@@ -40,9 +25,6 @@ const youtube_api_call = async () => {
         throw ({code,message});
     }
 }
-
-
-
 
 // Calling API's with the interval of 10 seconds
 setInterval(() => {
