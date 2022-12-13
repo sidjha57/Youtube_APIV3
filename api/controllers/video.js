@@ -5,7 +5,7 @@ const getVideos = (req, res)=>{
     const search = req.query.search? req.query.search :"";
     const limitTo = Number(req.query.perpagecount? req.query.perpagecount : "10");
     const pagenumber = Number(req.query.pagenumber? req.query.pagenumber : "0");
-    const offsetBy = limitTo*pagenumber;
+    const offsetBy = limitTo*pagenumber
     
     Video.findAll({
       offset: offsetBy, 
